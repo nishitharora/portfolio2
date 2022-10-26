@@ -1,0 +1,129 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    overflow: auto;
+}
+
+.container {
+    background-color: var(--background-secondary);
+    border-radius: 7px;
+}
+
+.header {
+    background-color: var(--g-background);
+    border-radius: 7px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.header h2 {
+    font-size: x-large;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: var(--text-secondary);
+}
+
+.buttonGroup {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.buttonGroup svg {
+    width: 25px;
+    height: 25px;
+    fill: var(--text-secondary);
+    transition: fill 300ms ease-in-out;
+}
+.buttonGroup svg:hover {
+    fill: var(--accent-secondary);
+}
+
+.images,
+.features,
+.tools {
+    padding: 15px;
+}
+
+.images {
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.images img {
+    height: 300px;
+    width: auto;
+    border-radius: 7px;
+    background-color: #000;
+}
+.images img:not(:last-child) {
+    margin-right: 10px;
+}
+
+.images::-webkit-scrollbar {
+    height: 0px;
+}
+
+.features li {
+    color: var(--text-secondary);
+    font-size: medium;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.features li:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.tools p {
+    color: var(--text-secondary);
+    font-size: medium;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.tools p span:not(:last-child)::after {
+    content: " · ";
+}
+
+@media only screen and (max-width: 400px) {
+    .main {
+        gap: 15px;
+    }
+
+    .header {
+        padding: 10px;
+    }
+
+    .header h2 {
+        font-size: large;
+    }
+
+    .buttonGroup {
+        display: none;
+    }
+
+    .images,
+    .features,
+    .tools {
+        padding: 10px;
+    }
+
+    .images img {
+        height: 170px;
+    }
+
+    .features li {
+        font-size: small;
+        font-weight: 300;
+    }
+
+    .tools p {
+        font-size: small;
+        font-weight: 400;
+    }
+}

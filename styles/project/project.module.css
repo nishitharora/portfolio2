@@ -1,0 +1,19 @@
+.main {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+    .main {
+        padding: 20px;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .main {
+        padding: 15px;
+    }
+}

@@ -1,0 +1,176 @@
+.main {
+    width: 100%;
+    margin: 150px 0;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+.container h3 {
+    font-size: medium;
+    font-weight: 600;
+    color: var(--accent-secondary);
+    background-color: var(--background-secondary);
+    border-radius: 5px;
+    padding: 7px 14px;
+    width: fit-content;
+    overflow-wrap: normal;
+}
+
+.container h4 {
+    font-size: xxx-large;
+    font-weight: 400;
+    color: var(--text-primary);
+    margin: 10px 0 40px 0;
+}
+
+.part {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.card {
+    background-color: transparent;
+    border-radius: 7px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    cursor: pointer;
+    transition: background-color 300ms ease-in-out;
+}
+.card.selected {
+    background-color: var(--background-secondary);
+}
+
+.card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card p {
+    font-size: large;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+.card:hover p {
+    color: var(--accent-secondary);
+}
+
+.right h5 {
+    color: var(--text-primary);
+    font-size: xx-large;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.right h5 a {
+    color: var(--accent-primary);
+}
+
+.right p {
+    color: var(--text-tertiary);
+    font-size: large;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.right ul {
+    margin-top: 30px;
+}
+
+.right li {
+    color: var(--text-secondary);
+    font-size: larger;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 10px 0;
+}
+.right li::before {
+    content: "| ";
+    color: var(--accent-primary);
+}
+
+@media only screen and (max-width: 800px) {
+    .main {
+        margin: 100px 0;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .container h4 {
+        margin: 10px 0 30px 0;
+    }
+
+    .card {
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .card img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .part {
+        grid-template-columns: 1fr;
+    }
+
+    .left {
+        flex-direction: row;
+        overflow-x: auto;
+    }
+    .left::-webkit-scrollbar {
+        height: 0px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .container h3 {
+        font-size: small;
+        padding: 7px 10px;
+    }
+
+    .container h4 {
+        font-size: xx-large;
+    }
+
+    .card p {
+        font-size: medium;
+    }
+
+    .right h5 {
+        font-size: x-large;
+    }
+
+    .right p {
+        font-size: medium;
+    }
+
+    .right ul {
+        margin-top: 20px;
+    }
+
+    .right li {
+        font-size: medium;
+    }
+}
