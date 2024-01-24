@@ -57,6 +57,7 @@ const Project = () => {
                         screenshots={projectInfo.screenshots}
                         features={projectInfo.features}
                         tools={projectInfo.tools}
+
                     />
                 </div>
             </>
